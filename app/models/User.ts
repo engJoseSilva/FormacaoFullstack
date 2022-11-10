@@ -10,7 +10,7 @@ interface IUser extends Document {
 
 const User: Schema = new mongoose.Schema(
   {
-    nome: {
+    name: {
       type: String,
       required: true,
     },
@@ -22,11 +22,7 @@ const User: Schema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-    },
-    access_token: {
-      type: String,
-      required: true,
-    },
+    }
   },
   { timestamps: true }
 );
