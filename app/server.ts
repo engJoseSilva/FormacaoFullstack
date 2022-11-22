@@ -8,11 +8,12 @@ import swaggerJSDoc from 'swagger-jsdoc';
 
 import mongoose from 'mongoose';
 import mongoConfig from './config/mongo';
-mongoose.connect(mongoConfig.url).then(() => {
-    console.log("Connected")
-}).catch( err => {
-    console.log("Erro " + err)
-}) 
+
+// mongoose.connect(mongoConfig.url).then(() => {
+//     console.log("Connected")
+// }).catch( err => {
+//     console.log("Erro " + err)
+// }) 
 
 const router: Express = express();
 
@@ -61,3 +62,5 @@ router.use('/', AuthRouter);
 router.listen ( 8080, () => {
     console.log("Servidor started ")
 })
+
+export default router;
